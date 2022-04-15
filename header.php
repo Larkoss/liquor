@@ -23,6 +23,11 @@
 
   <!-- Custom CSS file -->
   <link rel="stylesheet" href="style.css">
+
+  <?php
+    //require sql connection
+    require("database/functions.php");
+  ?>
 </head>
 
 <body>

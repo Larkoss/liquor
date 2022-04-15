@@ -108,10 +108,13 @@ include("header.php");
       </div>
       <!-- !subtotal section-->
     </div>
-    <hr>
     <!--  !shopping cart items   -->
   </div>
 </section>
+
+<?php
+include("top-sale.php");
+?>
 
 <!-- !Shopping cart section  -->
 <?php

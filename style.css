@@ -18,6 +18,10 @@ button, button:focus {
   font-family: "Rubik", cursive;
 }
 
+.font-logo {
+  font-family: "Shrikhand", cursive;
+}
+
 .font-size-12 {
   font-size: 12px;
 }
