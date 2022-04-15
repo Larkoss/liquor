@@ -99,4 +99,11 @@ button, button:focus {
   margin-top: 1rem;
 }
 
+.logo {
+  width: 100px;
+  border-radius: 100%;
+  margin-top: -5%;
+  margin-bottom: 0%;
+}
+
 /*# sourceMappingURL=style.css.map */
