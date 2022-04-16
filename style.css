@@ -18,10 +18,6 @@ button, button:focus {
   font-family: "Rubik", cursive;
 }
 
-.font-logo {
-  font-family: "Shrikhand", cursive;
-}
-
 .font-size-12 {
   font-size: 12px;
 }
@@ -95,12 +91,6 @@ button, button:focus {
 }
 #top-sale .owl-carousel .owl-nav button.owl-next span {
   margin-right: -4rem;
-}
-
-/*   Special Price Section Template */
-#special-price .grid .grid-item {
-  margin-right: 1.2rem;
-  margin-top: 1rem;
 }
 
 .logo {

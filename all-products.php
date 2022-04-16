@@ -1,13 +1,27 @@
 <!-- All products -->
+<style>
+.grid .grid-item {
+  margin-right: 1.2rem;
+  margin-top: 1rem;
+}
+</style>
+
+<?php 
+  $brand = array_map(function($pro){ return $pro['item_type']; }, $product_shuffle);
+  $unique = array_unique($brand);
+  sort($unique);
+?>
+
 <section id="all-products">
   <div class="container">
     <h4 class="font-rubik font-size-20">All products</h4>
     <div id="filters" class="button-group text-right font-baloo font-size-16">
       <button class="btn is-checked" data-filter="*">All Brand</button>
-      <button class="btn" data-filter=".Beer">Beer</button>
-      <button class="btn" data-filter=".Vodka">Vodka</button>
-      <button class="btn" data-filter=".Wine">Wine</button>
-      <button class="btn" data-filter=".Liqueur">Liqueur</button>
+      <?php
+       array_map(function($brand){
+         printf('<button class="btn" data-filter=".%s">%s</button>', $brand, $brand);
+       }, $unique)
+      ?>
     </div>
 
     <div class="grid">
