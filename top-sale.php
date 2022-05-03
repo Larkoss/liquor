@@ -1,6 +1,13 @@
 <!-- Top Sale -->
 <?php
-$product_shuffle = $product->getData();
+shuffle($product_shuffle);
+
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+  if (isset($_POST['top_sale_submit'])) {
+    // call method addToCart
+    $Cart->addToCart($_POST['user_id'], $_POST['item_id']);
+  }
+}
 ?>
 <section id="top-sale">
   <div class="container py-5">
@@ -11,9 +18,9 @@ $product_shuffle = $product->getData();
       <?php foreach ($product_shuffle as $item) { ?>
         <div class="item py-2">
           <div class="product font-rale">
-            <a href="#"><img src="<?php echo $item['item_image']?>" alt="product1" class="img-fluid"></a>
+            <a href="#"><img src="<?php echo $item['item_image'] ?>" alt="product1" class="img-fluid"></a>
             <div class="text-center">
-              <h6><?php echo $item['item_name']?></h6>
+              <h6><?php echo $item['item_name'] ?></h6>
               <div class="rating text-warning font-size-12">
                 <span><i class="fas fa-star"></i></span>
                 <span><i class="fas fa-star"></i></span>
@@ -22,9 +29,13 @@ $product_shuffle = $product->getData();
                 <span><i class="far fa-star"></i></span>
               </div>
               <div class="price py-2">
-                <span><?php echo $item['item_price']?> CZK</span>
+                <span><?php echo $item['item_price'] ?> CZK</span>
               </div>
-              <button type="submit" class="btn btn-warning font-size-12">Add to Cart</button>
+              <form method="post">
+                <input type="hidden" name="item_id" value="<?php echo $item['item_id'] ?>">
+                <input type="hidden" name="user_id" value="<?php echo 1 ?>">
+                <button type="submit" name="top_sale_submit" class="btn btn-warning font-size-12">Add to Cart</button>
+              </form>
             </div>
           </div>
         </div>
