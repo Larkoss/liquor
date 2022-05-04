@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Palachova Liquor</title>
-  <link rel="icon" href="Juan.png">
+  <link rel="icon" href="assets/Juan.png">
   <!-- Bootstrap CDN -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -45,7 +45,7 @@
 
     <!-- Primary Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark color-second-bg">
-      <a class="navbar-brand" href="#"><img class="logo" src="Juan.png" alt="logo"> Palachova Liquor</a>
+      <a class="navbar-brand" href="index.php"><img class="logo" src="assets/Juan.png" alt="logo"> Palachova Liquor</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -60,7 +60,7 @@
           </li>
         </ul>
         <form action="#" class="font-size-14 font-rale">
-          <a href="#" class="py-2 rounded-pill color-primary-bg">
+          <a href="cart.php" class="py-2 rounded-pill color-primary-bg">
             <span class="font-size-16 px-2 text-white"><i class="fas fa-shopping-cart"></i></span>
             <span class="px-3 py-2 rounded-pill text-dark bg-light"><?php echo count($product->getData('cart')); ?></span>
           </a>

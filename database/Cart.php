@@ -70,7 +70,7 @@ class Cart
         }
     }
 
-    // get item_it of shopping cart list
+    // get item_id of shopping cart list
     public function getCartId($cartArray = null, $key = "item_id"){
         if ($cartArray != null){
             $cart_id = array_map(function ($value) use($key){
