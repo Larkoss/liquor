@@ -1,7 +1,10 @@
 <!-- All products -->
+
+<!-- style to seperate the grid items with margin -->
 <style>
   .grid .grid-item {
-    margin-right: 1.2rem;
+    margin-right: 1.5rem;
+    margin-bottom: 1rem;
     margin-top: 1rem;
   }
 </style>
